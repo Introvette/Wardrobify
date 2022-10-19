@@ -2,7 +2,7 @@
 
 Team:
 
-* Yvette Rosario - SHOES!
+* Yvette Rosario - SHOES! adding views, models, installing app in project folder
 * Person 2 - jeff jiang
 
 ## Design
