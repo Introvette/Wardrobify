@@ -3,7 +3,7 @@
 Team:
 
 * Yvette Rosario - SHOES!
-* Person 2 - Which microservice?
+* Person 2 - jeff jiang
 
 ## Design
 
