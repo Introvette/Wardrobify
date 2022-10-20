@@ -20,7 +20,7 @@ class ShoeEncoder(ModelEncoder):
         "picture_url",
     ]
     encoders = {
-        "bins": BinVODetailEncoder(),
+        "bin": BinVODetailEncoder(),
     }
 
 @require_http_methods(["GET", "POST"])
@@ -36,9 +36,9 @@ def api_shoes(request):
         content = json.loads(request.body)
 
         try:
-            href = content["bins"]
+            href = content["bin"]
             bin = BinVO.objects.get(import_href=href)
-            content["bins"] = bin
+            content["bin"] = bin
         except BinVO.DoesNotExist:
             return JsonResponse(
                 {"message": "Invalid bin id"},

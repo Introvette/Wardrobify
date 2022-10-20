@@ -1,5 +1,47 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
+
+
+async function DeleteShoe(id) {
+    const url = `http://localhost:8080/api/shoes/${id}/`
+    const fetchConfig = {
+        method: "DELETE",
+    }
+    const response = await fetch(url, fetchConfig)
+    if (response.ok) {
+        window.location.reload(false)
+    } else {
+        console.error(response);
+    }
+}
+
+function ShoeColumn(props) {
+    return (
+        <div className="col">
+            {props.list.map(data => {
+                const shoe = data;
+                return (
+                    <div key={shoe.id} className="card mb-3 shadow">
+                        {/* <img src={shoe.picture} className="card-img-top" /> */}
+                        <div className="card-body">
+                            <h5 className="card-title">{shoe.manufacturer} {shoe.model_name} {shoe.model_color} shoe</h5>
+                            <p className="card-text">
+                                Located in: {shoe.bin.closet_name} closet on shelf #{shoe.bin.bin_number} in section #{shoe.bin.bin_size}
+                            </p>
+                            <button type="button" className="btn btn-outline-danger mx-3" onClick={() => DeleteShoe(shoe.id)}>Delete</button>
+                            <button type="button" className="btn btn-outline-primary" onClick={(e) => {
+                                e.preventDefault();
+                                window.location.href = shoe.picture_url;
+                            }}
+                            >See Image</button>
+                        </div>
+                    </div>
+                );
+            })}
+        </div>
+    )
+}
 
 class ShoesList extends React.Component {
 

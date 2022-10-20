@@ -2,15 +2,16 @@
 
 Team:
 
-* Yvette Rosario - SHOES! adding views, models, installing app in project folder
+* Yvette Rosario - SHOES!
 * Person 2 - jeff jiang
 
 ## Design
 
 ## Shoes microservice
 
-Explain your models and integration with the wardrobe
-microservice, here.
+The shoes app has bins. Each bin has a closet name, bin number, and bin size.
+Each bin can keep a pair of shoes with manufacturer, model name, model coler, picture, and its own unique id.
+
 
 ## Hats microservice
 

@@ -9,5 +9,6 @@ class BinVO(models.Model):
 class Shoe(models.Model):
     manufacturer = models.CharField(max_length=200)
     model_name = models.CharField(max_length=200)
-    color = models.URLField(null=True)
-    location = models.ForeignKey(BinVO, related_name='shoe', on_delete=models.CASCADE)
+    color = models.CharField(max_length=200)
+    bin = models.ForeignKey(BinVO, related_name='shoe', on_delete=models.CASCADE)
+    picture_url = models.URLField(null=True, blank=True)
