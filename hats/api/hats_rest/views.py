@@ -8,7 +8,7 @@ from common.json import ModelEncoder
 # Create your views here.
 class LocationVODetailEncoder(ModelEncoder):
     model = LocationVO
-    properties = ['import_href', 'closet_name', 'section_number', 'shelf_number', 'id']
+    properties = ['import_href', 'closet_name', 'section_number', 'shelf_number']
 
 class HatsListEncoder(ModelEncoder):
     model = Hats
@@ -33,7 +33,8 @@ def hats_list(request):
     else:
         content = json.loads(request.body)
         try:
-            location = LocationVO.objects.get(id=content['location'])
+            href = content['location']
+            location = LocationVO.objects.get(import_href=href)
             content['location'] = location
         except LocationVO.DoesNotExist:
             return JsonResponse({"error": "Location does not exist"}, status=400)
