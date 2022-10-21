@@ -21,7 +21,7 @@ class ShoesForm extends React.Component {
     }
 
     async componentDidMount() {
-        const url = 'http://localhost:8080/api/bins/';
+        const url = 'http://localhost:8100/api/bins/';
         const response = await fetch(url);
         if (response.ok) {
             const data = await response.json();
