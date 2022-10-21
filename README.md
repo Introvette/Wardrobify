@@ -14,6 +14,4 @@ Each bin can keep a pair of shoes with manufacturer, model name, model coler, pi
 
 
 ## Hats microservice
-
-Explain your models and integration with the wardrobe
-microservice, here.
+Can't find your hat? well, I have the app for you! The one and only Wardrobify. Say goodbye to messy closet space. This app allows you to keep your hats and shoes organized. So you can find what you need when you need it. Stayed tuned...
