@@ -35,8 +35,7 @@ class ShoesList extends React.Component {
                         <tr>
                             <th>Shoes</th>
                             <th>Shoe manufacturer</th>
-                            {/* <th>hat picture</th>
-                            <th>Hat location</th> */}
+
                         </tr>
                     </thead>
                         <tbody>

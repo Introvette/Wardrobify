@@ -86,8 +86,8 @@ class ShoesForm extends React.Component {
     render() {
         return (
             <div className="row">
-                <div className="ofset-3 col-6">
-                    <div className="card shadow">
+                <div className="offset-3 col-6">
+                    <div className="shadow p-4 mt-4">
                         <h1>Create a new shoes</h1>
                         <form onSubmit={this.handleSubmit} id="create-shoes-form">
                             <div className="form-floating mb-3">

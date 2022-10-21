@@ -86,7 +86,7 @@ class HatsForm extends React.Component {
       <div className='row'>
         <div className='offset-3 col-6'>
             <div className='shadow p-4 mt-4'>
-                <h1>Hats Form</h1>
+                <h1>Create a new hat</h1>
                 <form onSubmit={this.handleSubmit} id='-create-hats'>
                     <div className='form-floating mb-3'>
                         <input type='text' className='form-control' id='fabric' placeholder='Fabric' value={this.state.fabric} onChange={this.handleFabricChange} />
