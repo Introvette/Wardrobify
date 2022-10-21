@@ -24,7 +24,7 @@ class ShoesList extends React.Component {
         if (response.ok) {
             const data = await response.json();
             this.setState({ shoes: data });
-            console.log(data.shoes)
+            console.log(data)
         }
     }
     render() {
@@ -35,7 +35,8 @@ class ShoesList extends React.Component {
                         <tr>
                             <th>Shoes</th>
                             <th>Shoe manufacturer</th>
-
+                            {/* <th>hat picture</th>
+                            <th>Hat location</th> */}
                         </tr>
                     </thead>
                         <tbody>
